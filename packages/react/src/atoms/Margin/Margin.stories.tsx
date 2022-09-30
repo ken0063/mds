@@ -1,6 +1,6 @@
 import React from 'react';
 import Margin from './Margin';
-import { text, select } from '@storybook/addon-knobs';
+import { select } from '@storybook/addon-knobs';
 
 import { Spacing } from '@mds/foundation/lib';
 
@@ -9,12 +9,17 @@ export default {
   title: 'Atom/Margin',
 };
 
-export const Common = () => <Margin>Hello World!!!</Margin>;
+export const Common = () => (
+  <div style={{ display: 'flex', width: '100%', height: '80px' }}>
+    tell
+    <Margin space={select('Space', Object.values(Spacing), 'xxl')}>
+      Hello World!!!
+    </Margin>
+  </div>
+);
 
-// export const CustomDimensions = () => (
-//   <Color
-//     hexCode={text('HexCode', 'purple')}
-//     width={select('Width', Object.values(Spacing), 'xxl')}
-//     height={select('Height', Object.values(Spacing), 'xxl')}
-//   />
-// );
+export const MarginLeft = () => (
+  <Margin space={select('Space', Object.values(Spacing), 'xxl')} left={true}>
+    Hello World!!!
+  </Margin>
+);
