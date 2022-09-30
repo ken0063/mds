@@ -1,0 +1,310 @@
+/*=============================================
+=           Foundation - Variables            =
+=============================================*/
+/**
+
+*TABLE OF CONTENT
+*
+*COLORS
+*Brand colors............These are the main brand colors. They will be used the most
+*Neutral colors..........White and black,gray scale, secondary colors.
+*Utility colors..........Other colors to represent states: info,warning, sucess etc
+*
+*TYPOGRAPHY
+*Font families...........The fonts used in the design system.
+*Font weights ...........Font wieght.
+*Sizes...................Font sizing for the body text, paragraphs, inputs.
+*Heading sizes...........Font sizing for page headings.
+*
+*BREAKPOINTS
+*Breakpoints.............Global responsive breakpoints definations.
+*
+*SPACING
+*Spacing........................Global fixed set of spacing variables
+*/
+/*=============================================
+=                 Colors                     =
+=============================================*/
+/* Brand Colors */
+/* Neutral Colors */
+/* Utility Colors */
+/*=====  End of Colors  ======*/
+/*=============================================
+=             Typography                      =
+=============================================*/
+/**
+*
+*1) The playfair font. We'll use this for headings mostly.
+*      https://fonts.google.com/specimen/Playfair+Display
+*
+*2) The raleway font. We'll use this for the body text.
+*       https://fonts.google.com/specimen/Raleway+Display
+*
+*/
+/* Font families */
+/* 1 */
+/* 2 */
+/* Font sizes */
+/* Heading font sizes */
+/* Font weight */
+/*=====  End of Typography   ======*/
+/*=============================================
+=            Breakpoint                       =
+=============================================*/
+/*=====  End of Breakpoint  ======*/
+/*=============================================
+=            Spacing                          =
+=============================================*/
+/*=====  End of Spacing  ======*/
+/*=============================================
+=            Foundation - Colors              =
+=============================================*/
+/**
+*
+* This file defines the actual colors that will be used for styling. They will default to the palette we defined in the colors section of the _variable.scss file. This is our default palette, and devs can override this with thier own variables.
+*
+*/
+/*=============================================
+=            Global text colors               =
+=============================================*/
+/*=====  End of Global text colors  ======*/
+/*=============================================
+=            Buttons            =
+=============================================*/
+/*=====  End of Buttons  ======*/
+/*=============================================
+=            Forms            =
+=============================================*/
+/*=====  End of Forms  ======*/
+/*=============================================
+=            Foundation - Typography          =
+=============================================*/
+/**
+*
+* This file defines the default font sizes to be used on the headings and texts. The defaults come from the palette defined in the typography section of the  _variables.scss file.
+*
+*/
+/*=============================================
+=            Body font family                  =
+=============================================*/
+/*=====  End of Body font family  ======*/
+/*=============================================
+=            Body font sizes            =
+=============================================*/
+/*=====  End of Body font sizes  ======*/
+/*=============================================
+=            Heading font sizes            =
+=============================================*/
+/*=====  End of Heading font sizes  ======*/
+/*=============================================
+=            Heading font weight           =
+=============================================*/
+/*=====  End of Heading font weight  ======*/
+/*=============================================
+=            Mixins                           =
+=============================================*/
+/**
+ *
+ * Helpful reusable function-like things that will be used to implement
+ * styles for components.
+ *
+ */
+.mds-margin-none {
+  margin: 0;
+}
+
+.mds-margin-left-none {
+  margin-left: 0;
+}
+
+.mds-margin-right-none {
+  margin-right: 0;
+}
+
+.mds-margin-top-none {
+  margin-top: 0;
+}
+
+.mds-margin-bottom-none {
+  margin-bottom: 0;
+}
+
+.mds-margin-xxxs {
+  margin: 0.25rem;
+}
+
+.mds-margin-left-xxxs {
+  margin-left: 0.25rem;
+}
+
+.mds-margin-right-xxxs {
+  margin-right: 0.25rem;
+}
+
+.mds-margin-top-xxxs {
+  margin-top: 0.25rem;
+}
+
+.mds-margin-bottom-xxxs {
+  margin-bottom: 0.25rem;
+}
+
+.mds-margin-xxs {
+  margin: 0.5rem;
+}
+
+.mds-margin-left-xxs {
+  margin-left: 0.5rem;
+}
+
+.mds-margin-right-xxs {
+  margin-right: 0.5rem;
+}
+
+.mds-margin-top-xxs {
+  margin-top: 0.5rem;
+}
+
+.mds-margin-bottom-xxs {
+  margin-bottom: 0.5rem;
+}
+
+.mds-margin-xs {
+  margin: 0.75rem;
+}
+
+.mds-margin-left-xs {
+  margin-left: 0.75rem;
+}
+
+.mds-margin-right-xs {
+  margin-right: 0.75rem;
+}
+
+.mds-margin-top-xs {
+  margin-top: 0.75rem;
+}
+
+.mds-margin-bottom-xs {
+  margin-bottom: 0.75rem;
+}
+
+.mds-margin-sm {
+  margin: 1rem;
+}
+
+.mds-margin-left-sm {
+  margin-left: 1rem;
+}
+
+.mds-margin-right-sm {
+  margin-right: 1rem;
+}
+
+.mds-margin-top-sm {
+  margin-top: 1rem;
+}
+
+.mds-margin-bottom-sm {
+  margin-bottom: 1rem;
+}
+
+.mds-margin-md {
+  margin: 1.5rem;
+}
+
+.mds-margin-left-md {
+  margin-left: 1.5rem;
+}
+
+.mds-margin-right-md {
+  margin-right: 1.5rem;
+}
+
+.mds-margin-top-md {
+  margin-top: 1.5rem;
+}
+
+.mds-margin-bottom-md {
+  margin-bottom: 1.5rem;
+}
+
+.mds-margin-lg {
+  margin: 2rem;
+}
+
+.mds-margin-left-lg {
+  margin-left: 2rem;
+}
+
+.mds-margin-right-lg {
+  margin-right: 2rem;
+}
+
+.mds-margin-top-lg {
+  margin-top: 2rem;
+}
+
+.mds-margin-bottom-lg {
+  margin-bottom: 2rem;
+}
+
+.mds-margin-xl {
+  margin: 3rem;
+}
+
+.mds-margin-left-xl {
+  margin-left: 3rem;
+}
+
+.mds-margin-right-xl {
+  margin-right: 3rem;
+}
+
+.mds-margin-top-xl {
+  margin-top: 3rem;
+}
+
+.mds-margin-bottom-xl {
+  margin-bottom: 3rem;
+}
+
+.mds-margin-xxl {
+  margin: 4.5rem;
+}
+
+.mds-margin-left-xxl {
+  margin-left: 4.5rem;
+}
+
+.mds-margin-right-xxl {
+  margin-right: 4.5rem;
+}
+
+.mds-margin-top-xxl {
+  margin-top: 4.5rem;
+}
+
+.mds-margin-bottom-xxl {
+  margin-bottom: 4.5rem;
+}
+
+.mds-margin-xxxl {
+  margin: 6rem;
+}
+
+.mds-margin-left-xxxl {
+  margin-left: 6rem;
+}
+
+.mds-margin-right-xxxl {
+  margin-right: 6rem;
+}
+
+.mds-margin-top-xxxl {
+  margin-top: 6rem;
+}
+
+.mds-margin-bottom-xxxl {
+  margin-bottom: 6rem;
+}

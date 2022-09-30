@@ -1,0 +1,11 @@
+@import 'foundation/all';
+
+@each $size, $value in $spacing {
+  .mds-width-#{$size} {
+    width: $value;
+  }
+
+  .mds-height-#{$size} {
+    height: $value;
+  }
+}
