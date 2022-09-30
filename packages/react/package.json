@@ -9,7 +9,6 @@
   "devDependencies": {
     "@babel/core": "^7.19.3",
     "@babel/preset-env": "^7.19.3",
-    "@mds/foundtion": "^0.1.0",
     "@babel/preset-react": "^7.18.6",
     "@babel/preset-typescript": "^7.18.6",
     "@storybook/addon-a11y": "^6.5.12",
@@ -42,7 +41,7 @@
     "test:watch": "yarn test --watch",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "chromatic": "npx chromatic --project-token=46bfb07e2740"
+    "test:chromatic": "npx chromatic --project-token=\"$CHROMATIC_PROJECT_TOKEN\""
   },
   "publishConfig": {
     "access": "public"
