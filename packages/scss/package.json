@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "lib/index.js",
+  "files": [
+    "lib",
+    "src"
+  ],
   "scripts": {
     "lint": "stylelint './**/*.scss'",
     "lint:fix": "yarn lint --fix",
@@ -33,5 +37,8 @@
   },
   "dependencies": {
     "normalize-scss": "^7.0.1"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
