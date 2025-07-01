@@ -10,8 +10,8 @@
   "scripts": {
     "lint": "stylelint './**/*.scss'",
     "lint:fix": "yarn lint --fix",
-    "build": "node src/scripts/build.js",
-    "dev": "nodemon --watch src --exec yarn build -e scss"
+    "build": "node src/scripts/build.mjs",
+    "dev": "nodemon --watch src --exec \"node src/scripts/build.mjs\" -e scss"
   },
   "husky": {
     "hooks": {
@@ -25,18 +25,18 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "husky": "^8.0.1",
-    "lint-staged": "^13.0.3",
-    "node-sass": "^7.0.3",
-    "nodemon": "^2.0.20",
-    "prettier": "^2.7.1",
-    "stylelint": "^14.11.0",
-    "stylelint-config-prettier": "^9.0.3",
-    "stylelint-config-sass-guidelines": "^9.0.1",
-    "stylelint-prettier": "^2.0.0"
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.2",
+    "nodemon": "^3.1.10",
+    "prettier": "^3.6.2",
+    "sass": "^1.89.2",
+    "stylelint": "^16.21.0",
+    "stylelint-config-prettier": "^9.0.5",
+    "stylelint-config-sass-guidelines": "^12.1.0",
+    "stylelint-prettier": "^5.0.3"
   },
   "dependencies": {
-    "normalize-scss": "^7.0.1"
+    "normalize-scss": "^8.0.0"
   },
   "publishConfig": {
     "access": "public"

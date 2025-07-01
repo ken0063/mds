@@ -1,3 +1,6 @@
+@use '../foundation/variables' as *;
+@use '../foundation/colors' as *;
+
 :root {
   --mds-body-text-color: #{$dark};
   --mds-body-bg-color: #{$white};

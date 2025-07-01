@@ -1,4 +1,4 @@
-import { FC, ReactNode } from 'react';
+import { FC, ReactNode } from "react";
 export declare const KEY_CODES: {
     ENTER: number;
     SPACE: number;

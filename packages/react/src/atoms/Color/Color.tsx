@@ -1,5 +1,5 @@
-import React, { FC } from 'react';
-import { Spacing } from '@mds/foundation';
+import { FC } from "react";
+import { Spacing } from "@mds/foundation";
 
 export interface ColorProps {
   hexCode: string;
@@ -13,7 +13,12 @@ const Color: FC<ColorProps> = ({
   height = Spacing.sm,
 }) => {
   const className = `mds-width-${width} mds-height-${height}`;
-  return <div className={className} style={{ backgroundColor: hexCode }}></div>;
+  return (
+    <div
+      className={className}
+      style={{ backgroundColor: hexCode }}
+    ></div>
+  );
 };
 
 export default Color;

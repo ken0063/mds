@@ -1,4 +1,5 @@
-@import 'foundation/all';
+@use '../foundation/all' as *;
+@use 'sass:map';
 
 .mds-select {
   display: flex;
@@ -34,7 +35,7 @@
     z-index: 99;
     position: absolute;
     width: 100%;
-    box-shadow: map-get($shadows, 'base');
+    box-shadow: map.get($shadows, 'base');
     list-style: none;
     display: none;
   }

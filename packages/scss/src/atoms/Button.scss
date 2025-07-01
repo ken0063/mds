@@ -1,9 +1,10 @@
-@import 'foundation/all';
+@use '../foundation/all' as *;
+@use 'sass:map';
 
 .mds-button__container {
   display: flex;
   background: $btn-primary-bg;
   color: $btn-primary-color;
   border: none;
-  padding: map-get($spacing, 'xxxs');
+  padding: map.get($spacing, 'xxxs');
 }

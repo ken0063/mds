@@ -1,4 +1,4 @@
-@import 'foundation/all';
+@use '../foundation/all' as *;
 
 @each $size, $value in $spacing {
   .mds-width-#{$size} {

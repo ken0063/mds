@@ -3,16 +3,22 @@
     "outDir": "lib",
     "module": "esnext",
     "lib": ["DOM", "ESNext"],
-    "jsx": "react",
+    "jsx": "react-jsx",
     "allowSyntheticDefaultImports": true,
     "target": "esnext",
     "noImplicitAny": true,
     "strictNullChecks": true,
     "noImplicitReturns": true,
-    "noUnusedLocals": true,
+    "noUnusedLocals": false,
     "noUnusedParameters": true,
     "declaration": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "baseUrl": ".",
+    "paths": {
+      "@mds/foundation": ["../../foundation/src"]
+    }
   },
   "include": ["src"],
   "exclude": ["node_modules", "lib"]

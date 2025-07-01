@@ -1,5 +1,5 @@
-import { Spacing } from '@mds/foundation';
-import { FC, ReactNode } from 'react';
+import { Spacing } from "@mds/foundation";
+import { FC, ReactNode } from "react";
 export interface MarginProps {
     space?: keyof typeof Spacing;
     left?: boolean;

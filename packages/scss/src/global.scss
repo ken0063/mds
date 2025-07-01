@@ -13,7 +13,7 @@
 =                   Foundations              =
 =============================================*/
 
-@import "foundation/all";
+@use '../../scss/src/foundation/all' as *;
 
 /*=====  End of Foundations   ======*/
 
@@ -21,8 +21,9 @@
 =                   Base                       =
 ==============================================*/
 
-@import "base/reset";
-@import "base/root";
+@use '../../scss/src/base/root' as *;
+@use '../../scss/src/base/reset' as *;
+
 
 /*=====  End of Base  ======*/
 

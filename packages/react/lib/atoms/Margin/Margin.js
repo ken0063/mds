@@ -1,5 +1,5 @@
+import { jsx } from 'react/jsx-runtime';
 import { Spacing } from '@mds/foundation';
-import React from 'react';
 
 const Margin = ({ space = Spacing.xxxs, children, left, right, top, bottom, }) => {
     let className = ``;
@@ -18,7 +18,7 @@ const Margin = ({ space = Spacing.xxxs, children, left, right, top, bottom, }) =
     if (bottom) {
         className = `${className} mds-margin-bottom-${space}`;
     }
-    return React.createElement("div", { className: className }, children);
+    return jsx("div", { className: className, children: children });
 };
 
 export { Margin as default };

@@ -1,4 +1,5 @@
-import React, { useState, useRef, useEffect, createRef } from 'react';
+import { jsxs, jsx } from 'react/jsx-runtime';
+import { useState, useRef, useEffect, createRef } from 'react';
 import Text from '../../atoms/Text/Text.js';
 
 const KEY_CODES = {
@@ -26,7 +27,7 @@ const getNextOptionIndex = (currentIndex, options) => {
     }
     return currentIndex + 1;
 };
-const Select = ({ options = [], label = 'Please select an option', optionHandler, renderOption, }) => {
+const Select = ({ options = [], label = "Please select an option", optionHandler, renderOption, }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [selectedIndex, setSelectedIndex] = useState(null);
     const [highlightedIndex, setHighlightedIndex] = useState(null);
@@ -87,47 +88,39 @@ const Select = ({ options = [], label = 'Please select an option', optionHandler
             onOptionSelected(options[highlightedIndex], highlightedIndex);
         }
     };
-    return (React.createElement("div", { className: "mds-select" },
-        React.createElement("button", { ref: labelRef, "data-testid": "mds-select-button", className: "mds-select__label", onClick: handleSelectToggle, "aria-controls": "mds-select-list", "aria-haspopup": true, "aria-expanded": isOpen ? true : undefined, onKeyDown: onButtonKeyDown },
-            React.createElement(Text, null, selectedOption === null ? label : selectedOption?.label),
-            React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", fill: "none", viewBox: "0 0 24 24", strokeWidth: "1.5", stroke: "currentColor", width: "1rem", height: "1rem", className: `mds-select__caret ${isOpen ? 'mds-select__caret--open' : 'mds-select__caret--close'}` },
-                React.createElement("path", { strokeLinecap: "round", strokeLinejoin: "round", d: "M19.5 8.25l-7.5 7.5-7.5-7.5" }))),
-        React.createElement("ul", { role: "menu", "aria-hidden": isOpen ? undefined : false, id: "mds-select-list", className: `mds-select__overlay ${isOpen ? 'mds-select__overlay--open' : ''}`, style: { top: overlayTop } }, options?.map((item, idx) => {
-            const isSelected = selectedIndex === idx;
-            const isHighlighted = highlightedIndex === idx;
-            const ref = optionRefs[idx];
-            const renderOptionProps = {
-                ref,
-                options: item,
-                isSelected,
-                getOptionRecommendedProps: (overrideProps = {}) => {
-                    return {
+    return (jsxs("div", { className: 'mds-select', children: [jsxs("button", { ref: labelRef, "data-testid": 'mds-select-button', className: 'mds-select__label', onClick: handleSelectToggle, "aria-controls": 'mds-select-list', "aria-haspopup": true, "aria-expanded": isOpen ? true : undefined, onKeyDown: onButtonKeyDown, children: [jsx(Text, { children: selectedOption === null ? label : selectedOption?.label }), jsx("svg", { xmlns: 'http://www.w3.org/2000/svg', fill: 'none', viewBox: '0 0 24 24', strokeWidth: '1.5', stroke: 'currentColor', width: '1rem', height: '1rem', className: `mds-select__caret ${isOpen ? "mds-select__caret--open" : "mds-select__caret--close"}`, children: jsx("path", { strokeLinecap: 'round', strokeLinejoin: 'round', d: 'M19.5 8.25l-7.5 7.5-7.5-7.5' }) })] }), jsx("ul", { role: 'menu', "aria-hidden": isOpen ? undefined : false, id: 'mds-select-list', className: `mds-select__overlay ${isOpen ? "mds-select__overlay--open" : ""}`, style: { top: overlayTop }, children: options?.map((item, idx) => {
+                    const isSelected = selectedIndex === idx;
+                    const isHighlighted = highlightedIndex === idx;
+                    const ref = optionRefs[idx];
+                    const renderOptionProps = {
                         ref,
-                        role: 'menuitemradio',
-                        'aria-label': item?.label,
-                        'aria-checked': isSelected ? true : undefined,
-                        onKeyDown: onOptionKeyDown,
-                        tabIndex: isHighlighted ? -1 : 0,
-                        onMouseEnter: () => highlightOption(idx),
-                        onMouseLeave: () => highlightOption(null),
-                        className: `mds-select__option
-                        ${isSelected ? 'mds-select__option--selected' : ''}
-                        ${isHighlighted ? 'mds-select__option--highlighted' : ''}
+                        options: item,
+                        isSelected,
+                        getOptionRecommendedProps: (overrideProps = {}) => {
+                            return {
+                                ref,
+                                role: "menuitemradio",
+                                "aria-label": item?.label,
+                                "aria-checked": isSelected ? true : undefined,
+                                onKeyDown: onOptionKeyDown,
+                                tabIndex: isHighlighted ? -1 : 0,
+                                onMouseEnter: () => highlightOption(idx),
+                                onMouseLeave: () => highlightOption(null),
+                                className: `mds-select__option
+                        ${isSelected ? "mds-select__option--selected" : ""}
+                        ${isHighlighted ? "mds-select__option--highlighted" : ""}
                     `,
-                        key: item?.value,
-                        onClick: () => onOptionSelected(item, idx),
-                        ...overrideProps,
+                                key: item?.value,
+                                onClick: () => onOptionSelected(item, idx),
+                                ...overrideProps,
+                            };
+                        },
                     };
-                },
-            };
-            if (renderOption) {
-                return renderOption(renderOptionProps);
-            }
-            return (React.createElement("li", { ...renderOptionProps.getOptionRecommendedProps() },
-                React.createElement(Text, null, item?.label),
-                isSelected && (React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", fill: "none", viewBox: "0 0 24 24", strokeWidth: "1.5", stroke: "currentColor", width: "1rem", height: "1rem" },
-                    React.createElement("path", { strokeLinecap: "round", strokeLinejoin: "round", d: "M4.5 12.75l6 6 9-13.5" })))));
-        }))));
+                    if (renderOption) {
+                        return renderOption(renderOptionProps);
+                    }
+                    return (jsxs("li", { ...renderOptionProps.getOptionRecommendedProps(), children: [jsx(Text, { children: item?.label }), isSelected && (jsx("svg", { xmlns: 'http://www.w3.org/2000/svg', fill: 'none', viewBox: '0 0 24 24', strokeWidth: '1.5', stroke: 'currentColor', width: '1rem', height: '1rem', children: jsx("path", { strokeLinecap: 'round', strokeLinejoin: 'round', d: 'M4.5 12.75l6 6 9-13.5' }) }))] }));
+                }) })] }));
 };
 
 export { KEY_CODES, Select as default };

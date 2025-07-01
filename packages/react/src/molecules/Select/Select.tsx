@@ -1,4 +1,4 @@
-import React, {
+import {
   createRef,
   FC,
   KeyboardEventHandler,
@@ -6,8 +6,8 @@ import React, {
   useEffect,
   useRef,
   useState,
-} from 'react';
-import Text from '../../atoms/Text';
+} from "react";
+import Text from "../../atoms/Text";
 
 export const KEY_CODES = {
   ENTER: 13,
@@ -66,7 +66,7 @@ const getNextOptionIndex = (
 
 const Select: FC<SelectProps> = ({
   options = [],
-  label = 'Please select an option',
+  label = "Please select an option",
   optionHandler,
   renderOption,
 }) => {
@@ -75,7 +75,7 @@ const Select: FC<SelectProps> = ({
   const [highlightedIndex, setHighlightedIndex] = useState<null | number>(null);
   const labelRef = useRef<HTMLButtonElement>(null);
   const [optionRefs, setOptionRefs] = useState<
-    React.RefObject<HTMLLIElement>[]
+    React.RefObject<HTMLLIElement | null>[]
   >([]);
   const [overlayTop, setOverlayTop] = useState<number>(0);
 
@@ -154,13 +154,13 @@ const Select: FC<SelectProps> = ({
   };
 
   return (
-    <div className="mds-select">
+    <div className='mds-select'>
       <button
         ref={labelRef}
-        data-testid="mds-select-button"
-        className="mds-select__label"
+        data-testid='mds-select-button'
+        className='mds-select__label'
         onClick={handleSelectToggle}
-        aria-controls="mds-select-list"
+        aria-controls='mds-select-list'
         aria-haspopup={true}
         aria-expanded={isOpen ? true : undefined}
         onKeyDown={onButtonKeyDown}
@@ -168,31 +168,31 @@ const Select: FC<SelectProps> = ({
         <Text>{selectedOption === null ? label : selectedOption?.label}</Text>
 
         <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth="1.5"
-          stroke="currentColor"
-          width="1rem"
-          height="1rem"
+          xmlns='http://www.w3.org/2000/svg'
+          fill='none'
+          viewBox='0 0 24 24'
+          strokeWidth='1.5'
+          stroke='currentColor'
+          width='1rem'
+          height='1rem'
           className={`mds-select__caret ${
-            isOpen ? 'mds-select__caret--open' : 'mds-select__caret--close'
+            isOpen ? "mds-select__caret--open" : "mds-select__caret--close"
           }`}
         >
           <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+            strokeLinecap='round'
+            strokeLinejoin='round'
+            d='M19.5 8.25l-7.5 7.5-7.5-7.5'
           />
         </svg>
       </button>
 
       <ul
-        role="menu"
+        role='menu'
         aria-hidden={isOpen ? undefined : false}
-        id="mds-select-list"
+        id='mds-select-list'
         className={`mds-select__overlay ${
-          isOpen ? 'mds-select__overlay--open' : ''
+          isOpen ? "mds-select__overlay--open" : ""
         }`}
         style={{ top: overlayTop }}
       >
@@ -207,17 +207,17 @@ const Select: FC<SelectProps> = ({
             getOptionRecommendedProps: (overrideProps = {}) => {
               return {
                 ref,
-                role: 'menuitemradio',
-                'aria-label': item?.label,
-                'aria-checked': isSelected ? true : undefined,
+                role: "menuitemradio",
+                "aria-label": item?.label,
+                "aria-checked": isSelected ? true : undefined,
                 onKeyDown: onOptionKeyDown,
                 tabIndex: isHighlighted ? -1 : 0,
                 onMouseEnter: () => highlightOption(idx),
                 onMouseLeave: () => highlightOption(null),
                 className: `mds-select__option
-                        ${isSelected ? 'mds-select__option--selected' : ''}
+                        ${isSelected ? "mds-select__option--selected" : ""}
                         ${
-                          isHighlighted ? 'mds-select__option--highlighted' : ''
+                          isHighlighted ? "mds-select__option--highlighted" : ""
                         }
                     `,
                 key: item?.value,
@@ -234,18 +234,18 @@ const Select: FC<SelectProps> = ({
               <Text>{item?.label}</Text>
               {isSelected && (
                 <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="currentColor"
-                  width="1rem"
-                  height="1rem"
+                  xmlns='http://www.w3.org/2000/svg'
+                  fill='none'
+                  viewBox='0 0 24 24'
+                  strokeWidth='1.5'
+                  stroke='currentColor'
+                  width='1rem'
+                  height='1rem'
                 >
                   <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M4.5 12.75l6 6 9-13.5"
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    d='M4.5 12.75l6 6 9-13.5'
                   />
                 </svg>
               )}

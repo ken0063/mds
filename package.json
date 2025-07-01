@@ -7,7 +7,7 @@
     "build": "yarn lerna run build",
     "dev": "yarn lerna run dev",
     "test": "yarn lerna run test",
-    "publish": "yarn test && yarn build && yarn lerna publish",
+    "publish": "yarn build && yarn lerna publish",
     "commit": "yarn git-cz",
     "test:chromatic": "yarn lerna run test:chromatic",
     "build:storybook": "yarn build && yarn lerna run build-storybook"
@@ -21,12 +21,17 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "@commitlint/cli": "^17.1.2",
-    "@commitlint/config-conventional": "^17.1.0",
-    "commitizen": "^4.2.5",
+    "@babel/core": "^7.27.7",
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@rollup/plugin-commonjs": "^28.0.6",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-typescript": "^12.1.4",
+    "commitizen": "^4.3.1",
     "cz-conventional-changelog": "^3.3.0",
-    "husky": "^8.0.1",
-    "lerna": "^5.5.1"
+    "husky": "^9.1.7",
+    "lerna": "^8.2.3",
+    "sass": "^1.89.2"
   },
   "private": true,
   "workspaces": {

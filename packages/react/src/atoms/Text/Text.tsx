@@ -1,5 +1,5 @@
-import React, { FC, ReactNode } from 'react';
-import { FontSize } from '@mds/foundation';
+import { FC, ReactNode } from "react";
+import { FontSize } from "@mds/foundation";
 
 export interface TextProps {
   size?: keyof typeof FontSize;
