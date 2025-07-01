@@ -1,6 +1,9 @@
 {
-  "packages": ["packages/*", "playgrounds/*"],
-  "version": "0.0.0",
+  "packages": [
+    "packages/*",
+    "playgrounds/*"
+  ],
+  "version": "1.1.0",
   "npmClient": "yarn",
   "stream": true,
   "command": {
